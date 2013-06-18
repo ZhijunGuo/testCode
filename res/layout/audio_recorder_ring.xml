@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout 
+	android:layout_gravity="center_vertical|center_horizontal"
+	android:gravity ="center_vertical|center_horizontal"
+	android:id="@+id/recorder_ring" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+  	xmlns:android="http://schemas.android.com/apk/res/android">
+  	<RelativeLayout android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content" 
+	    	android:id="@+id/pls_talk_rl"
+	    	android:layout_centerInParent="true"
+	    	>
+	    	
+  	
+  	
+  	<TextView
+    	android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textColor="#292421"
+    	android:text="@string/movecancel"
+    	android:layout_alignParentBottom="true"
+    	android:textSize="16sp"
+    	android:id="@+id/chatpoptextcancel"
+    	android:layout_centerHorizontal="true"
+    />
+  	<TextView
+    	android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textColor="#ffffff"
+    	android:text="@string/zerosecond"
+    	android:textSize="18sp"
+    	android:id="@+id/chatpoptext"
+    	android:layout_centerHorizontal="true"
+    	android:layout_above="@id/chatpoptextcancel"
+    />
+  	
+  	<ImageView 
+	    	android:id="@+id/chatting_image" 
+	    	android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content" 
+	    	android:background="@drawable/record01" 
+	    	android:layout_above="@id/chatpoptext"
+	    	android:layout_centerHorizontal="true"/>
+  	<TextView
+    	android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textColor="#ffffff"
+    	android:textSize="50sp"
+    	android:textStyle="bold"
+    	android:id="@+id/lastTimetext"
+    	android:layout_centerInParent="true"
+    	android:visibility="gone"
+    />
+  	</RelativeLayout>
+  	<RelativeLayout android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content" 
+	    	android:id="@+id/pls_delete_rl"
+	    	android:layout_centerInParent="true"
+	    	android:visibility="gone">
+  	       <TextView
+    	android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textColor="#ffffff"
+    	android:text="@string/loosencancel"
+    	android:textSize="20sp"
+    	android:layout_marginTop="5dip"
+    	android:id="@+id/unsnapcancel"
+    	android:layout_centerHorizontal="true"
+    />
+  	       <ImageView 
+	    	android:id="@+id/unsnap_image" 
+	    	android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content" 
+	    	android:src="@drawable/plus_delete" 
+	    	android:layout_below="@id/unsnapcancel"
+	    	android:layout_centerHorizontal="true"/>
+  	</RelativeLayout>
+</RelativeLayout>

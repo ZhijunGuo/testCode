@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.galaxy08"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	
+    <application
+        android:allowBackup="true"
+        android:name="com.example.galaxy08.SysApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.galaxy08.register_login.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.example.galaxy08.MainMessageActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.MainFeedActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.TaskActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.MainMoreActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.MainActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.chat.ChatActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.chat.ChatHistoryActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.feed.FeedDetailActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.PersonInfoActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.SelectContactActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.register_login.RegisterActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.register_login.RegisterActivity2"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.MainContactActivity"
+            ></activity>
+        <activity 
+            android:name="com.example.galaxy08.feed.FeedPublishActivity"
+            ></activity>
+        <provider 
+            android:name="com.example.galaxy08.dao.GalaxyProvider"
+            android:authorities="com.example.galaxy"
+            ></provider>
+    </application>
+
+</manifest>

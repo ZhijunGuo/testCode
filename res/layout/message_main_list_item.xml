@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent" >
+    
+    <ImageView 
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/message_main_list_item_icon"
+        android:src="@drawable/default_avatar"
+        android:layout_margin="5dp"
+        />
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/message_main_list_item_groupname"
+                />
+            <TextView 
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:background="@drawable/messagecount_back"
+                android:id="@+id/message_main_list_item_groupmessagecount"
+                />
+            <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="0dp"
+                />
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/message_main_list_item_grouptime"
+                />
+        </LinearLayout>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:text="@string/message_list_message"
+            android:id="@+id/message_main_list_item_grouplastmessage"
+            />
+    </LinearLayout>
+
+</LinearLayout>

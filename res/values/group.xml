@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="groupname">
+        <item >管理层</item>
+        <item >管理层2</item>
+        <item >设计组</item>
+        <item >市场部</item>
+        <item >研发部</item>
+        <item >后勤</item>
+        <item >财会</item>
+        <item >行政</item>
+        <item >人事</item>
+    </string-array>
+    
+    <string-array name="guanliceng">
+        <item >管理层群</item>
+        <item >张秘书</item>
+    </string-array>
+    
+    <string-array name="guanliceng2">
+        <item >954017</item>
+        <item >954018</item>
+    </string-array>
+    
+    <string-array name="shejizu">
+        <item >张三</item>
+        <item >李四</item>
+    </string-array>
+</resources>

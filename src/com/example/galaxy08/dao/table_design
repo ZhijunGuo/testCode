@@ -1,0 +1,76 @@
+CREATE TABLE [tb_chatgroup] (
+  [_id] INTEGER PRIMARY KEY AUTOINCREMENT, 
+  [groupid] char(32) NOT NULL, 
+  [groupname] char(32) UNIQUE ON CONFLICT FAIL, 
+  [createtime] integer, 
+  [avatar] TEXT);
+
+
+CREATE TABLE "tb_chatgroupuser" (
+  [_id] INTEGER PRIMARY KEY AUTOINCREMENT, 
+  [userid] CHAR(32), 
+  [groupid] CHAR(32), 
+  [targetid] CHAR(32), 
+  [type] INTEGER(32));
+
+
+CREATE TABLE [tb_chatmessage] (
+  [_id] INTEGER PRIMARY KEY AUTOINCREMENT, 
+  [userid] CHAR(32), 
+  [targetid] CHAR(32), 
+  [mediatype] INTEGER, 
+  [content] TEXT, 
+  [sendtime] INTEGER, 
+  [receivetime] INTEGER, 
+  [sequence] INTEGER, 
+  [status] INTEGER, 
+  [media_cache] TEXT, 
+  [audio_time] INTEGER, 
+  [name] TEXT, 
+  [avatar] TEXT, 
+  [type] INTEGER);
+
+
+CREATE TABLE "tb_chatsession" (
+  [_id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+  [targetid] CHAR(32), 
+  [type] CHAR(32), 
+  [lastupdate] INTEGER, 
+  [createtime] INTEGER);
+
+CREATE TABLE [tb_user] (
+  [_id] INTEGER PRIMARY KEY AUTOINCREMENT, 
+  [userid] char(32) DEFAULT ('0'), 
+  [firstname] char(32) DEFAULT (''), 
+  [lastname] char(32) DEFAULT (''), 
+  [enfirstname] char(32) DEFAULT (''), 
+  [enmiddlename] char(32) DEFAULT (''), 
+  [enlastname] char(32) DEFAULT (''), 
+  [displayname] CHAR(32), 
+  [avatar] TEXT, 
+  [school] char(32) DEFAULT (''), 
+  [birthday] char(32) DEFAULT (''), 
+  [industry] char(32) DEFAULT (''), 
+  [company] char(255) DEFAULT (''), 
+  [dep] char(255) DEFAULT (''), 
+  [address] char(255) DEFAULT (''), 
+  [mobile] char(255) DEFAULT (''), 
+  [fax] char(255) DEFAULT (''), 
+  [phone] char(255) DEFAULT (''), 
+  [title] char(255) DEFAULT (''), 
+  [email] char(255) DEFAULT (''), 
+  [website] char(255) DEFAULT (''), 
+  [weibo] char(255) DEFAULT (''), 
+  [im] char(255) DEFAULT (''), 
+  [postcode] char(255) DEFAULT (' '), 
+  [remark] char(255) DEFAULT (''), 
+  [signature] char(255) DEFAULT (''), 
+  [privacy] char(32) DEFAULT ('0'), 
+  [usertype] CHAR(32), 
+  [level] CHAR(32));
+
+
+CREATE VIEW view_chat_group_user as 
+select A.*, B.groupid, B.groupname, B.avatar, C.userid, C.displayname, C.avatar 
+from tb_chatsession A, tb_chatgroup B, tb_user C 
+where A.type = 1 and A.targetid = B.groupid or A.type = 0 and A.targetid = C.userid;

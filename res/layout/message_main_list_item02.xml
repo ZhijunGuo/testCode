@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<TextView 
+	    android:layout_width="0dp"
+	    android:layout_weight="1.0"
+	    android:layout_height="50dp"
+	    android:id="@+id/message_main_groupname"
+	    android:layout_gravity="center|left"
+	    android:gravity="center_vertical"
+	    />
+	
+	<CheckBox
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/right"
+	    android:layout_gravity="center|right"
+	    android:id="@+id/main_list_checkbox"
+	    android:focusable="false"
+	    android:checked="false"
+	    style="@style/message_item_checkbox"
+	    />
+</LinearLayout>
